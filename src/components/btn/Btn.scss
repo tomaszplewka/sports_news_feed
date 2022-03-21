@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.btn {
+  border: none;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient($white, $secondary);
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: $white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -10%;
+    width: 0;
+    height: 120%;
+    background: $white;
+    transform: skewX(15deg);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: $primary;
+    border: 1px solid $white;
+    transition: all 0.3s ease;
+
+    &::after {
+      left: -10%;
+      width: 120%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:active {
+    border-color: rgba(blue, 0.9);
+    color: blue;
+    transition: all 0.3s ease;
+  }
+
+  &__overlay {
+    position: relative;
+    z-index: 10;
+  }
+}

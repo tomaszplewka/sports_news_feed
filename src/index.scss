@@ -1,0 +1,23 @@
+@import "./styles/variables";
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+* {
+  font-family: $font-family-base;
+  scrollbar-width: thin;
+  scrollbar-color: $primary transparent;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+}

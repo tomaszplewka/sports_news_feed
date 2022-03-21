@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.spinner {
+  border-radius: 50%;
+  border-top: 5px solid $secondary;
+  border-right: 5px solid $primary;
+  border-bottom: 5px solid $secondary;
+  border-left: 5px solid $primary;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  z-index: 101;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &__section {
+    top: 0;
+    left: 0;
+    z-index: 999999;
+  }
+
+  &__wrapper {
+    top: 0;
+    left: 0;
+    transform: scaleX(1);
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

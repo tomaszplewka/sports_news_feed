@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.comment {
+  &__avatar {
+    &__wrapper {
+      img {
+        max-width: 150px;
+        object-fit: contain;
+
+        @include respond-below(md) {
+          max-width: 100px;
+        }
+
+        @include respond-below(xxs) {
+          max-width: 50px;
+        }
+      }
+    }
+  }
+}

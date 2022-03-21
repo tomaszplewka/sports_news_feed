@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.single-post {
+  &__title {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+
+  &__wrapper {
+    width: 75%;
+
+    @include respond-below(lg) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrapper {
+      height: 400px;
+
+      @include respond-below(sm) {
+        height: 300px;
+      }
+    }
+  }
+
+  &__content {
+    &__body {
+      text-transform: capitalize;
+      letter-spacing: 2px;
+
+      &::first-letter {
+        font-size: 2rem;
+      }
+    }
+  }
+}
